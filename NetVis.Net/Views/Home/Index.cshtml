@@ -1,0 +1,45 @@
+﻿@model NetVis.Net.Models.Site
+@{
+    ViewBag.Title = "Sites and Subnets";
+}
+<h2>@ViewBag.Title</h2>
+<table>
+    <tr>
+        @foreach (var sites in ViewBag.ListSites)
+        {
+            if (sites.Priority == 1)
+            {
+            <td style="vertical-align: top">
+                <table>
+                    <tr>
+                        <th>@sites.Name</th>
+                    </tr>
+                    @foreach (NetVis.Net.Models.Subnet mainsubnet in sites.Subnets)
+                    {
+                        <tr>
+                            <td>@Html.ActionLink(mainsubnet.Network, "Details", "Subnet", new { id = mainsubnet.SubnetId }, null)</td>
+                        </tr>   
+                    }
+                </table>
+            </td>
+            }
+        }
+    </tr>
+</table>
+<hr />
+<table>
+    @foreach (var remotes in ViewBag.ListSites)
+    {
+        if (remotes.Priority != 1)
+        {
+        <tr>
+            <td>@remotes.Name</td>
+            @foreach (NetVis.Net.Models.Subnet remotesubnets in remotes.Subnets)
+            {
+    
+                <td>@Html.ActionLink(remotesubnets.Network, "Details", "Subnet", new { id = remotesubnets.SubnetId }, null)</td>
+            }
+        </tr>
+        }
+    }
+</table>

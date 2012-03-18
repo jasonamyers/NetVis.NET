@@ -1,0 +1,50 @@
+﻿@model NetVis.Net.Models.Site
+@{
+    ViewBag.Title = "Details";
+}
+<h2>
+    Details</h2>
+<fieldset>
+    <legend>Site</legend>
+    <div class="display-label">
+        Name</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+    <div class="display-label">
+        Address</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Address)
+    </div>
+    <div class="display-label">
+        Description</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Description)
+    </div>
+    <div class="display-label">
+        Priority</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Priority)
+    </div>
+    <table>
+        @foreach (var item in Model.Contacts)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Phone)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+            </tr>
+        
+        }
+    </table>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.SiteId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
