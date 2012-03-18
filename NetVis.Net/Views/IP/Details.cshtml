@@ -1,0 +1,40 @@
+﻿@model NetVis.Net.Models.Ip
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Ip</legend>
+
+    <div class="display-label">Subnet</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Subnet.Network)
+    </div>
+
+    <div class="display-label">Address</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Address)
+    </div>
+
+    <div class="display-label">Name</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+
+    <div class="display-label">Purpose</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Purpose)
+    </div>
+
+    <div class="display-label">Url</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Url)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.IpId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

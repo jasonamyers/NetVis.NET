@@ -1,0 +1,72 @@
+﻿@model NetVis.Net.Models.Subnet
+@{
+    ViewBag.Title = "Details";
+}
+<h2>
+    Details</h2>
+<table>
+    <tr>
+        <td valign=top>
+            <div id="subnetips">
+                <table>
+                    <tr>
+                        <th>
+                            Address
+                        </th>
+                        <th>
+                            Name
+                        </th>
+                    </tr>
+                  @foreach (NetVis.Net.Models.Ip ip in Model.Ips.OrderBy(i => i.Address, new NetVis.Net.Models.IPComparer()))
+                    {
+                        <tr>
+                            <td>@ip.Address
+                            </td>
+                            <td>@ip.Name
+                            </td>
+                        </tr>
+                    }
+                </table>
+            </div>
+        </td>
+        <td>
+            <div id="subnetinfo">
+                <fieldset>
+                    <legend>Subnet</legend>
+                    <div class="display-label">
+                        Site</div>
+                    <div class="display-field">
+                        @Html.DisplayFor(model => model.Site.Name)
+                    </div>
+                    <div class="display-label">
+                        Network</div>
+                    <div class="display-field">
+                        @Html.DisplayFor(model => model.Network)
+                    </div>
+                    <div class="display-label">
+                        Description</div>
+                    <div class="display-field">
+                        @Html.DisplayFor(model => model.Description)
+                    </div>
+                    <div class="display-label">
+                        Netmask</div>
+                    <div class="display-field">
+                        @Html.DisplayFor(model => model.Netmask)
+                    </div>
+                    <div class="display-label">
+                        Gateway</div>
+                    <div class="display-field">
+                        @Html.DisplayFor(model => model.Gateway)
+                    </div>
+                </fieldset>
+            </div>
+            <div id="actions">
+                <p>
+                    @Html.ActionLink("Add New IP", "Create", "IP")
+                    @Html.ActionLink("Edit", "Edit", new { id = Model.SubnetId }) |
+                    @Html.ActionLink("Back to List", "Index")
+                </p>
+            </div>
+        </td>
+    </tr>
+</table>
