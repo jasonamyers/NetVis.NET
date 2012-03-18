@@ -1,63 +1,52 @@
 ﻿@model IEnumerable<NetVis.Net.Models.Subnet>
-
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Subnets";
 }
+<div class="Outer">
+    <div class="Inner">
+        <div class="MainContent">
+            <table>
+                <tr>
+                    <th>
+                        Site
+                    </th>
+                    <th>
+                        Network
+                    </th>
+                    <th>
+                        Description
+                    </th>
 
-<h2>Index</h2>
+                    <th>
+                    </th>
+                </tr>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Site.Name)
+                        </td>
+                        <td>
+                            @Html.ActionLink(Html.DisplayFor(modelItem => item.Network).ToString(), "Details", new { id = item.SubnetId})
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Description)
+                        </td>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table>
-    <tr>
-        <th>
-            Site
-        </th>
-        <th>
-            Network
-        </th>
-        <th>
-            Description
-        </th>
-        <th>
-            Netmask
-        </th>
-        <th>
-            Gateway
-        </th>
-        <th>
-            Preference
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Site.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Network)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Description)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Netmask)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Gateway)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Preference)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.SubnetId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.SubnetId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.SubnetId })
-        </td>
-    </tr>
-}
-
-</table>
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", new { id=item.SubnetId }) | @Html.ActionLink("Delete", "Delete", new { id = item.SubnetId })
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+        <div class="RightColumn">
+            <b>Create New:</b>
+            <div class="indent">
+                @Html.ActionLink("Subnet", "Create", "Subnet")<br />
+            </div>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+</div>

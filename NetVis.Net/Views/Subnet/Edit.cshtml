@@ -1,75 +1,76 @@
 ﻿@model NetVis.Net.Models.Subnet
-
 @{
-    ViewBag.Title = "Edit";
+    ViewBag.Title = "Edit: " + Model.Network;
 }
-
-<h2>Edit</h2>
-
 <script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
 <script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+<div class="Outer">
+    <div class="Inner">
+        <div class="MainContent">
+            @using (Html.BeginForm())
+            {
+                @Html.ValidationSummary(true)
+                @Html.HiddenFor(model => model.SubnetId)
 
-@using (Html.BeginForm()) {
-    @Html.ValidationSummary(true)
-    <fieldset>
-        <legend>Subnet</legend>
-
-        @Html.HiddenFor(model => model.SubnetId)
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.SiteId, "Site")
+                <table>
+                    <tr>
+                        <th>
+                            @Html.LabelFor(model => model.SiteId, "Site")
+                        </th>
+                        <td>
+                            @Html.DropDownList("SiteId", String.Empty)
+                        </td>
+                        @Html.ValidationMessageFor(model => model.SiteId)
+                    </tr>
+                    <tr>
+                        <th>@Html.LabelFor(model => model.Description)
+                        </th>
+                        <td>@Html.EditorFor(model => model.Description)
+                        </td>
+                        @Html.ValidationMessageFor(model => model.Description)
+                    </tr>
+                    <tr>
+                        <th>@Html.LabelFor(model => model.Network)
+                        </th>
+                        <td>@Html.EditorFor(model => model.Network)
+                        </td>
+                        @Html.ValidationMessageFor(model => model.Network)
+                    </tr>
+                    <tr>
+                        <th>@Html.LabelFor(model => model.Netmask)
+                        </th>
+                        <td>@Html.EditorFor(model => model.Netmask)
+                        </td>
+                        @Html.ValidationMessageFor(model => model.Netmask)
+                    </tr>
+                    <tr>
+                        <th>@Html.LabelFor(model => model.Gateway)
+                        </th>
+                        <td>@Html.EditorFor(model => model.Gateway)
+                        </td>
+                        @Html.ValidationMessageFor(model => model.Gateway)
+                    </tr>
+                    <tr>
+                        <th>@Html.LabelFor(model => model.Preference)
+                        </th>
+                        <td>@Html.EditorFor(model => model.Preference)
+                        </td>
+                        @Html.ValidationMessageFor(model => model.Preference)
+                    </tr>
+                </table>
+                <p>
+                    <input type="submit" value="Save" />
+                </p>
+ 
+            }
         </div>
-        <div class="editor-field">
-            @Html.DropDownList("SiteId", String.Empty)
-            @Html.ValidationMessageFor(model => model.SiteId)
+        <div class="RightColumn">
+            <b>Create New:</b>
+            <div class="indent">
+                @Html.ActionLink("Subnet", "Create", "Subnet")<br />
+            </div>
         </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Network)
+        <div class="clear">
         </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Network)
-            @Html.ValidationMessageFor(model => model.Network)
-        </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Description)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Description)
-            @Html.ValidationMessageFor(model => model.Description)
-        </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Netmask)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Netmask)
-            @Html.ValidationMessageFor(model => model.Netmask)
-        </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Gateway)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Gateway)
-            @Html.ValidationMessageFor(model => model.Gateway)
-        </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Preference)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Preference)
-            @Html.ValidationMessageFor(model => model.Preference)
-        </div>
-
-        <p>
-            <input type="submit" value="Save" />
-        </p>
-    </fieldset>
-}
-
-<div>
-    @Html.ActionLink("Back to List", "Index")
+    </div>
 </div>
