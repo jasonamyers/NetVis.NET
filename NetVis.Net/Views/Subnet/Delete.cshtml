@@ -1,48 +1,31 @@
 ﻿@model NetVis.Net.Models.Subnet
-
 @{
     ViewBag.Title = "Delete";
 }
-
-<h2>Delete</h2>
-
-<h3>Are you sure you want to delete this?</h3>
-<fieldset>
-    <legend>Subnet</legend>
-
-    <div class="display-label">Site</div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.Site.Name)
+<div class="Outer">
+    <div class="Inner">
+        <div class="MainContent">
+            <h3>
+                Are you sure you want to delete this?</h3>
+            <b>Network: </b>@Html.DisplayFor(model => model.Network)<br />
+            <b>Netmask: </b>@Html.DisplayFor(model => model.Netmask)<br />
+            <b>Gateway: </b>@Html.DisplayFor(model => model.Gateway)<br />
+            <b>Description: </b>@Html.DisplayFor(model => model.Description)<br />
+            <br />
+            @using (Html.BeginForm())
+            {
+                <p>
+                    <input type="submit" value="Delete" />
+                </p>
+            }
+        </div>
+        <div class="RightColumn">
+            <b>Create New:</b>
+            <div class="indent">
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+        </div>
+        <div class="clear">
+        </div>
     </div>
-
-    <div class="display-label">Network</div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.Network)
-    </div>
-
-    <div class="display-label">Description</div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.Description)
-    </div>
-
-    <div class="display-label">Netmask</div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.Netmask)
-    </div>
-
-    <div class="display-label">Gateway</div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.Gateway)
-    </div>
-
-    <div class="display-label">Preference</div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.Preference)
-    </div>
-</fieldset>
-@using (Html.BeginForm()) {
-    <p>
-        <input type="submit" value="Delete" /> |
-        @Html.ActionLink("Back to List", "Index")
-    </p>
-}
+</div>

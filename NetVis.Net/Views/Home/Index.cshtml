@@ -2,7 +2,9 @@
 @{
     ViewBag.Title = "Sites and Subnets";
 }
-<h2>@ViewBag.Title</h2>
+<div class="Outer">
+<div class="Inner">
+<div class="MainContent">
 <table>
     <tr>
         @foreach (var sites in ViewBag.ListSites)
@@ -43,3 +45,15 @@
         }
     }
 </table>
+</div>
+<div class="RightColumn">
+<b>Create New:</b>
+<div class="indent">
+                    @Html.ActionLink("Subnet","Create","Subnet")<br />
+                    @Html.ActionLink("Site", "Create", "Site")
+
+</div>
+</div>
+<div class="clear"></div> 
+</div>
+</div>
