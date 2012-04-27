@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="87cbcbfa-d9dd-4d8b-99df-cf4434e38d6d" name="jamyers@CCS10600LT 2012-03-29 09:53:28" runUser="CCS\jamyers" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Default Test Settings" id="2594049c-7527-41f9-81b5-6712cb795eae">
+    <Deployment runDeploymentRoot="jamyers_CCS10600LT 2012-03-29 09_53_28">
+      <DeploymentItem filename="C:\Users\jamyers\Documents\Visual Studio 2010\Projects\NetVis.Net\NetVis.Net.Tests\bin\Debug\EntityFramework.dll" />
+      <DeploymentItem filename="C:\Users\jamyers\Documents\Visual Studio 2010\Projects\NetVis.Net\NetVis.Net\bin\NetVis.Net.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2012-03-29T09:53:28.5710971-05:00" queuing="2012-03-29T09:53:28.7762816-05:00" start="2012-03-29T09:53:28.7822870-05:00" finish="2012-03-29T09:53:30.4357738-05:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="1" executed="1" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="SubnetControllerConstructorTest" storage="c:\users\jamyers\documents\visual studio 2010\projects\netvis.net\netvis.net.tests\bin\debug\netvis.net.tests.dll" id="b4cc67a9-afe3-0ab4-913d-f53f0209ad76">
+      <Execution id="dc181db3-84cf-4c50-bd0a-e61892ca4a35" />
+      <TestMethod codeBase="C:/Users/jamyers/Documents/Visual Studio 2010/Projects/NetVis.Net/NetVis.Net.Tests/bin/Debug/NetVis.Net.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="NetVis.Net.Tests.SubnetControllerTest, NetVis.Net.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="SubnetControllerConstructorTest" />
+      <AspNet webSiteUrl="http://localhost:49292/">
+        <Host pathToWebApp="C:\Users\jamyers\Documents\Visual Studio 2010\Projects\NetVis.Net\NetVis.Net" webAppRoot="/" />
+      </AspNet>
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="b4cc67a9-afe3-0ab4-913d-f53f0209ad76" executionId="dc181db3-84cf-4c50-bd0a-e61892ca4a35" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="dc181db3-84cf-4c50-bd0a-e61892ca4a35" testId="b4cc67a9-afe3-0ab4-913d-f53f0209ad76" testName="SubnetControllerConstructorTest" computerName="CCS10600LT" startTime="2012-03-29T09:53:28.7862906-05:00" endTime="2012-03-29T09:53:30.4187585-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="dc181db3-84cf-4c50-bd0a-e61892ca4a35">
+      <Output>
+        <ErrorInfo>
+          <Message>The Web request 'http://localhost:49292/' completed successfully without running the test. This can occur when configuring the Web application for testing fails (an ASP.NET server error occurs when processing the request), or when no ASP.NET page is executed (the URL may point to an HTML page, a Web service, or a directory listing). Running tests in ASP.NET requires the URL to resolve to an ASP.NET page and for the page to execute properly up to the Load event. The response from the request is stored in the file 'WebRequestResponse_SubnetControllerCons.html' with the test results; typically this file can be opened with a Web browser to view its contents.</Message>
+        </ErrorInfo>
+      </Output>
+      <ResultFiles>
+        <ResultFile path="CCS10600LT\WebRequestResponse_SubnetControllerCons.html" />
+      </ResultFiles>
+    </UnitTestResult>
+  </Results>
+</TestRun>

@@ -5,20 +5,31 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using NetVis.Net.DAL;
 using NetVis.Net.Models;
 
 namespace NetVis.Net.Controllers
 { 
     public class SiteController : Controller
     {
-        private NetVisEntities db = new NetVisEntities();
+        private ISiteRepository siteRepository;
+
+        public SiteController()
+        {
+            this.siteRepository = new SiteRepository(new NetVisEntities());
+        }
+
+        public SiteController(ISiteRepository siteRepository)
+        {
+            this.siteRepository = siteRepository;
+        }
 
         //
         // GET: /Site/
 
         public ViewResult Index()
         {
-            return View(db.Sites.ToList());
+            return View(siteRepository.GetSites());
         }
 
         //
@@ -26,9 +37,7 @@ namespace NetVis.Net.Controllers
 
         public ViewResult Details(int id)
         {
-            Site site = db.Sites.Include("Contacts").Include("Subnets").Single(s => s.SiteId == id);
-//            Site site = db.Sites.Find(id);
-            return View(site);
+            return View(siteRepository.GetSiteByID(id));
         }
 
         //
@@ -49,8 +58,8 @@ namespace NetVis.Net.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Sites.Add(site);
-                db.SaveChanges();
+                siteRepository.InsertSite(site);
+                siteRepository.Save();
                 return RedirectToAction("Index");  
             }
 
@@ -63,7 +72,7 @@ namespace NetVis.Net.Controllers
         
         public ActionResult Edit(int id)
         {
-            Site site = db.Sites.Find(id);
+            Site site = siteRepository.GetSiteByID(id);
             return View(site);
         }
 
@@ -76,8 +85,8 @@ namespace NetVis.Net.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Entry(site).State = EntityState.Modified;
-                db.SaveChanges();
+                siteRepository.UpdateSite(site);
+                siteRepository.Save();
                 return RedirectToAction("Index");
             }
             return View(site);
@@ -89,7 +98,7 @@ namespace NetVis.Net.Controllers
         
         public ActionResult Delete(int id)
         {
-            Site site = db.Sites.Find(id);
+            Site site = siteRepository.GetSiteByID(id);
             return View(site);
         }
 
@@ -100,15 +109,15 @@ namespace NetVis.Net.Controllers
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
         {            
-            Site site = db.Sites.Find(id);
-            db.Sites.Remove(site);
-            db.SaveChanges();
+            Site site = siteRepository.GetSiteByID(id);
+            siteRepository.DeleteSite(id);
+            siteRepository.Save();
             return RedirectToAction("Index");
         }
 
         protected override void Dispose(bool disposing)
         {
-            db.Dispose();
+            siteRepository.Dispose();
             base.Dispose(disposing);
         }
     }

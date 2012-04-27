@@ -1,37 +1,51 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NetVis - @ViewBag.Title</title>
-    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/bootstrap.min.css")" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+      .sidebar-nav {
+        padding: 9px 0;
+      }
+    </style>
+    <link href="@Url.Content("~/Content/bootstrap-responsive.css")" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <script src="@Url.Content("~/Scripts/less-1.3.0.min.js")" type="text/javascript"></script>
     <script src="@Url.Content("~/Scripts/jquery-1.5.1.min.js")" type="text/javascript"></script>
     <script src="@Url.Content("~/Scripts/modernizr-1.7.min.js")" type="text/javascript"></script>
 </head>
 <body>
-    <div class="page">
-        <header>
-            <div id="title">
-                <h1>NetVis - @ViewBag.Title</h1>
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container-fluid">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span
+                    class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+                </a><a class="brand" href="/">NetVis</a>
+                <div class="nav-collapse">
+                    <ul class="nav">
+                        <li class="Active">@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li>@Html.ActionLink("Subnets", "Index", "Subnet")</li>
+                        <li>@Html.ActionLink("Sites", "Index", "Site")</li>
+                        <li>@Html.ActionLink("Contacts", "Index", "Contact")</li>
+                    </ul>
+                    <p class="navbar-text pull-right">
+                        FixME: Logged in as <a href="#">username</a></p>
+                </div>
             </div>
-            <div id="logindisplay">
-                @Html.Partial("_LogOnPartial")
-            </div>
-            <nav>
-                <ul id="menu">
-                    <li>@Html.ActionLink("Subnets", "Index", "Subnet")</li>
-                    <li>@Html.ActionLink("Sites", "Index", "Site")</li>
-                    <li>@Html.ActionLink("Contacts", "Index", "Contact")</li>
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                </ul>
-            </nav>
-        </header>
-        <section id="main">
-        <div class="container">
-            @RenderBody()
-</div>
-        </section>
-        <footer>
-        </footer>
+        </div>
     </div>
+    <section id="main">
+                @RenderBody()
+       </section>
 </body>
 </html>

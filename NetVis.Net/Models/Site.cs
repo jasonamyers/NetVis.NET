@@ -12,7 +12,7 @@ namespace NetVis.Net.Models
         public string Address { get; set; }
         public string Description { get; set; }
         public int Priority { get; set; }
-        public List<Contact> Contacts { get; set; }
-        public List<Subnet> Subnets { get; set; }
+        public ICollection<Contact> Contacts { get; set; }
+        public ICollection<Subnet> Subnets { get; set; }
     }
 }

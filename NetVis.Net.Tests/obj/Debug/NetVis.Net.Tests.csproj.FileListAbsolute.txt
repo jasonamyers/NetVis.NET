@@ -11,10 +11,22 @@ C:\Users\jamyers\Documents\Visual Studio 2010\Projects\NetVis.Net\NetVis.Net.Tes
 C:\Users\jamyers\Documents\Visual Studio 2010\Projects\NetVis.Net\NetVis.Net.Tests\bin\Debug\NetVis.Net.Tests.dll
 C:\Users\jamyers\Documents\Visual Studio 2010\Projects\NetVis.Net\NetVis.Net.Tests\bin\Debug\NetVis.Net.Tests.pdb
 C:\Users\jamyers\Documents\Visual Studio 2010\Projects\NetVis.Net\NetVis.Net.Tests\bin\Debug\NetVis.Net.dll
-C:\Users\jamyers\Documents\Visual Studio 2010\Projects\NetVis.Net\NetVis.Net.Tests\bin\Debug\EntityFramework.dll
 C:\Users\jamyers\Documents\Visual Studio 2010\Projects\NetVis.Net\NetVis.Net.Tests\bin\Debug\NetVis.Net.pdb
 C:\Users\jamyers\Documents\Visual Studio 2010\Projects\NetVis.Net\NetVis.Net.Tests\bin\Debug\EntityFramework.xml
 C:\Users\jamyers\Documents\Visual Studio 2010\Projects\NetVis.Net\NetVis.Net.Tests\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\jamyers\Documents\Visual Studio 2010\Projects\NetVis.Net\NetVis.Net.Tests\obj\Debug\NetVis.Net.Tests.dll
 C:\Users\jamyers\Documents\Visual Studio 2010\Projects\NetVis.Net\NetVis.Net.Tests\obj\Debug\NetVis.Net.Tests.pdb
 C:\Users\Jason\Documents\Visual Studio 2010\Projects\NetVis.Net\NetVis.Net.Tests\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\jamyers\Documents\Visual Studio 2010\Projects\NetVis.Net\NetVis.Net.Tests\bin\Debug\NetVis.Net_Accessor.dll
+C:\Users\jamyers\Documents\Visual Studio 2010\Projects\NetVis.Net\NetVis.Net.Tests\bin\Debug\NetVis.Net_Accessor.pdb
+C:\Projects\NetVis.Net\NetVis.Net.Tests\bin\Debug\NetVis.Net.Tests.dll.config
+C:\Projects\NetVis.Net\NetVis.Net.Tests\bin\Debug\NetVis.Net.Tests.dll
+C:\Projects\NetVis.Net\NetVis.Net.Tests\bin\Debug\NetVis.Net.Tests.pdb
+C:\Projects\NetVis.Net\NetVis.Net.Tests\bin\Debug\NetVis.Net.dll
+C:\Projects\NetVis.Net\NetVis.Net.Tests\bin\Debug\NetVis.Net.pdb
+C:\Projects\NetVis.Net\NetVis.Net.Tests\bin\Debug\EntityFramework.xml
+C:\Projects\NetVis.Net\NetVis.Net.Tests\bin\Debug\NetVis.Net_Accessor.dll
+C:\Projects\NetVis.Net\NetVis.Net.Tests\bin\Debug\NetVis.Net_Accessor.pdb
+C:\Projects\NetVis.Net\NetVis.Net.Tests\obj\Debug\ResolveAssemblyReference.cache
+C:\Projects\NetVis.Net\NetVis.Net.Tests\obj\Debug\NetVis.Net.Tests.dll
+C:\Projects\NetVis.Net\NetVis.Net.Tests\obj\Debug\NetVis.Net.Tests.pdb

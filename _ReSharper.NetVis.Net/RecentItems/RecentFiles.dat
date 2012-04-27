@@ -1,0 +1,66 @@
+﻿<RecentFiles>
+  <RecentFiles>
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Contact/f:Create.cshtml" caret="0" fromTop="0" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Contact/f:Delete.cshtml" caret="0" fromTop="0" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Models/f:Contact.cs" caret="0" fromTop="0" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Controllers/f:AccountController.cs" caret="0" fromTop="0" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Content/d:themes/d:base/f:jquery.ui.theme.css" caret="0" fromTop="0" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Site/f:Details.cshtml" caret="371" fromTop="16" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Models/f:Ip.cs" caret="0" fromTop="0" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:DAL/f:IContactRepository.cs" caret="381" fromTop="13" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Models/f:IpComparer.cs" caret="0" fromTop="0" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:DAL/f:IIpRepository.cs" caret="201" fromTop="9" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:DAL/f:IpRepository.cs" caret="95" fromTop="3" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Controllers/f:SubnetController.cs" caret="2860" fromTop="14" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Controllers/f:IPController.cs" caret="297" fromTop="13" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/f:_ViewStart.cshtml" caret="52" fromTop="2" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:DAL/f:ISubnetRepository.cs" caret="258" fromTop="11" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:DAL/f:SiteRepository.cs" caret="596" fromTop="23" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:DAL/f:ISiteRepository.cs" caret="74" fromTop="2" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Controllers/f:SiteController.cs" caret="925" fromTop="27" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Controllers/f:HomeController.cs" caret="210" fromTop="8" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Content/f:bootstrap.min.css" caret="34629" fromTop="35" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Home/f:Index.cshtml" caret="625" fromTop="17" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Contact/f:Index.cshtml" caret="608" fromTop="13" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:DAL/f:SubnetRepository.cs" caret="743" fromTop="27" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Controllers/f:ContactController.cs" caret="2069" fromTop="23" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Subnet/f:Edit.cshtml" caret="808" fromTop="20" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:DAL/f:ContactRepository.cs" caret="734" fromTop="15" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Shared/f:_Layout.cshtml" caret="289" fromTop="6" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Content/f:Site.css" caret="278" fromTop="0" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Contact/f:Details.cshtml" caret="658" fromTop="10" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Contact/f:Edit.cshtml" caret="859" fromTop="17" />
+  </RecentFiles>
+  <RecentEdits>
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Contact/f:Index.cshtml" caret="541" fromTop="15" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Contact/f:Index.cshtml" caret="315" fromTop="9" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Contact/f:Edit.cshtml" caret="2857" fromTop="6" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Contact/f:Edit.cshtml" caret="2857" fromTop="14" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Contact/f:Edit.cshtml" caret="2857" fromTop="37" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Contact/f:Edit.cshtml" caret="2651" fromTop="27" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Contact/f:Edit.cshtml" caret="708" fromTop="20" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Contact/f:Edit.cshtml" caret="2593" fromTop="38" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Contact/f:Index.cshtml" caret="2619" fromTop="28" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Contact/f:Edit.cshtml" caret="2499" fromTop="34" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Contact/f:Details.cshtml" caret="2092" fromTop="5" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Contact/f:Details.cshtml" caret="2092" fromTop="27" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Contact/f:Details.cshtml" caret="2092" fromTop="31" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Content/f:Site.css" caret="5520" fromTop="0" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Shared/f:_Layout.cshtml" caret="447" fromTop="14" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Shared/f:_Layout.cshtml" caret="289" fromTop="6" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Content/f:Site.css" caret="6452" fromTop="42" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Content/f:Site.css" caret="3728" fromTop="0" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Content/f:Site.css" caret="4723" fromTop="42" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Content/f:Site.css" caret="3085" fromTop="42" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Content/f:Site.css" caret="278" fromTop="0" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Contact/f:Details.cshtml" caret="2092" fromTop="8" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Contact/f:Details.cshtml" caret="2092" fromTop="20" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Contact/f:Details.cshtml" caret="2092" fromTop="26" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Contact/f:Details.cshtml" caret="2092" fromTop="31" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Contact/f:Details.cshtml" caret="2092" fromTop="27" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Contact/f:Details.cshtml" caret="1551" fromTop="33" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Contact/f:Details.cshtml" caret="658" fromTop="10" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:DAL/f:ContactRepository.cs" caret="656" fromTop="26" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Contact/f:Edit.cshtml" caret="1073" fromTop="20" />
+  </RecentEdits>
+</RecentFiles>

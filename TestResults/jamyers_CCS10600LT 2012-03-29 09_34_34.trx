@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="2421c3dc-ae47-462a-870b-b9e9bfe02ace" name="jamyers@CCS10600LT 2012-03-29 09:34:34" runUser="CCS\jamyers" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Default Test Settings" id="7a3213ad-4345-46ef-97d8-ee0ad32aaadf">
+    <Deployment runDeploymentRoot="jamyers_CCS10600LT 2012-03-29 09_34_34">
+      <DeploymentItem filename="C:\Users\jamyers\Documents\Visual Studio 2010\Projects\NetVis.Net\NetVis.Net\bin\NetVis.Net.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2012-03-29T09:34:34.9832368-05:00" queuing="2012-03-29T09:34:36.3546481-05:00" start="2012-03-29T09:34:36.4666817-05:00" finish="2012-03-29T09:34:53.8987681-05:00" />
+  <ResultSummary outcome="Error">
+    <Counters total="2" executed="1" error="0" failed="0" timeout="0" aborted="1" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="1" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+    <RunInfos>
+      <RunInfo computerName="CCS10600LT" outcome="Error" timestamp="2012-03-29T09:34:53.8927615-05:00">
+        <Text>Test host process exited unexpectedly.</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="Index" storage="c:\users\jamyers\documents\visual studio 2010\projects\netvis.net\netvis.net.tests\bin\debug\netvis.net.tests.dll" id="fdcd16a6-cd1e-97fd-a62e-916d7c0aa52d">
+      <Execution id="3bbe3c1d-f3c8-478c-a428-736140887fa6" />
+      <TestMethod codeBase="C:/Users/jamyers/Documents/Visual Studio 2010/Projects/NetVis.Net/NetVis.Net.Tests/bin/Debug/NetVis.Net.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="NetVis.Net.Tests.Controllers.HomeControllerTest, NetVis.Net.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Index" />
+    </UnitTest>
+    <UnitTest name="About" storage="c:\users\jamyers\documents\visual studio 2010\projects\netvis.net\netvis.net.tests\bin\debug\netvis.net.tests.dll" id="0493adaa-add5-07d9-ee92-7514f45c3440">
+      <Execution id="698e560e-7e0e-40a1-ae87-6ecefca126cd" />
+      <TestMethod codeBase="C:/Users/jamyers/Documents/Visual Studio 2010/Projects/NetVis.Net/NetVis.Net.Tests/bin/Debug/NetVis.Net.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="NetVis.Net.Tests.Controllers.HomeControllerTest, NetVis.Net.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="About" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="fdcd16a6-cd1e-97fd-a62e-916d7c0aa52d" executionId="3bbe3c1d-f3c8-478c-a428-736140887fa6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0493adaa-add5-07d9-ee92-7514f45c3440" executionId="698e560e-7e0e-40a1-ae87-6ecefca126cd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="3bbe3c1d-f3c8-478c-a428-736140887fa6" testId="fdcd16a6-cd1e-97fd-a62e-916d7c0aa52d" testName="Index" computerName="CCS10600LT" duration="00:00:17.3870729" startTime="2012-03-29T09:34:36.5116952-05:00" endTime="2012-03-29T09:34:53.8987681-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Aborted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3bbe3c1d-f3c8-478c-a428-736140887fa6">
+    </UnitTestResult>
+    <UnitTestResult executionId="698e560e-7e0e-40a1-ae87-6ecefca126cd" testId="0493adaa-add5-07d9-ee92-7514f45c3440" testName="About" computerName="CCS10600LT" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="698e560e-7e0e-40a1-ae87-6ecefca126cd">
+    </UnitTestResult>
+  </Results>
+</TestRun>

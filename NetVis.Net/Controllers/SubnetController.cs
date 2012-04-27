@@ -5,21 +5,31 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using NetVis.Net.DAL;
 using NetVis.Net.Models;
 
 namespace NetVis.Net.Controllers
 { 
     public class SubnetController : Controller
     {
-        private NetVisEntities db = new NetVisEntities();
+        private ISubnetRepository subnetRepository;
+        private ISiteRepository siteRepository = new SiteRepository(new NetVisEntities());
 
+        public SubnetController()
+        {
+            this.subnetRepository = new SubnetRepository(new NetVisEntities());
+        }
+
+        public SubnetController(ISubnetRepository subnetRepository)
+        {
+            this.subnetRepository = subnetRepository;
+        }
         //
         // GET: /Subnet/
 
         public ViewResult Index()
         {
-            var subnets = db.Subnets.Include(s => s.Site);
-            return View(subnets.ToList());
+            return View(subnetRepository.GetSubnets());
         }
 
         //
@@ -27,9 +37,7 @@ namespace NetVis.Net.Controllers
 
         public ViewResult Details(int id)
         {
-            //List<Ip> ips = db.Ips.Where(i => i.SubnetId==id).ToList();
-            //ViewBag.ListIps = ips;
-            Subnet subnet = db.Subnets.Include("Ips").Include("Site").Single(s => s.SubnetId == id);
+            Subnet subnet = subnetRepository.GetSubnetByID(id);
             return View(subnet);
         }
 
@@ -38,7 +46,7 @@ namespace NetVis.Net.Controllers
 
         public ActionResult Create()
         {
-            ViewBag.SiteId = new SelectList(db.Sites, "SiteId", "Name");
+            ViewBag.SiteId = new SelectList(siteRepository.GetSites(), "SiteId", "Name");
             return View();
         } 
 
@@ -50,12 +58,12 @@ namespace NetVis.Net.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Subnets.Add(subnet);
-                db.SaveChanges();
+                subnetRepository.InsertSubnet(subnet);
+                subnetRepository.Save();
                 return RedirectToAction("Index");  
             }
 
-            ViewBag.SiteId = new SelectList(db.Sites, "SiteId", "Name", subnet.SiteId);
+            ViewBag.SiteId = new SelectList(siteRepository.GetSites(), "SiteId", "Name", subnet.SiteId);
             return View(subnet);
         }
         
@@ -64,8 +72,8 @@ namespace NetVis.Net.Controllers
  
         public ActionResult Edit(int id)
         {
-            Subnet subnet = db.Subnets.Find(id);
-            ViewBag.SiteId = new SelectList(db.Sites, "SiteId", "Name", subnet.SiteId);
+            Subnet subnet = subnetRepository.GetSubnetByID(id);
+            ViewBag.SiteId = new SelectList(siteRepository.GetSites(), "SiteId", "Name", subnet.SiteId);
             return View(subnet);
         }
 
@@ -77,11 +85,11 @@ namespace NetVis.Net.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Entry(subnet).State = EntityState.Modified;
-                db.SaveChanges();
+                subnetRepository.UpdateSubnet(subnet);
+                subnetRepository.Save();
                 return RedirectToAction("Index");
             }
-            ViewBag.SiteId = new SelectList(db.Sites, "SiteId", "Name", subnet.SiteId);
+            ViewBag.SiteId = new SelectList(siteRepository.GetSites(), "SiteId", "Name", subnet.SiteId);
             return View(subnet);
         }
 
@@ -90,7 +98,7 @@ namespace NetVis.Net.Controllers
  
         public ActionResult Delete(int id)
         {
-            Subnet subnet = db.Subnets.Find(id);
+            Subnet subnet = subnetRepository.GetSubnetByID(id);
             return View(subnet);
         }
 
@@ -100,15 +108,15 @@ namespace NetVis.Net.Controllers
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
         {            
-            Subnet subnet = db.Subnets.Find(id);
-            db.Subnets.Remove(subnet);
-            db.SaveChanges();
+            Subnet subnet = subnetRepository.GetSubnetByID(id);
+            subnetRepository.DeleteSubnet(id);
+            subnetRepository.Save();
             return RedirectToAction("Index");
         }
 
         protected override void Dispose(bool disposing)
         {
-            db.Dispose();
+            subnetRepository.Dispose();
             base.Dispose(disposing);
         }
     }

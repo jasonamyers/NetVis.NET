@@ -78,13 +78,21 @@
     <Compile Include="Controllers\IPController.cs" />
     <Compile Include="Controllers\SiteController.cs" />
     <Compile Include="Controllers\SubnetController.cs" />
+    <Compile Include="DAL\ContactRepository.cs" />
+    <Compile Include="DAL\IContactRepository.cs" />
+    <Compile Include="DAL\IIpRepository.cs" />
+    <Compile Include="DAL\IpRepository.cs" />
+    <Compile Include="DAL\ISiteRepository.cs" />
+    <Compile Include="DAL\ISubnetRepository.cs" />
+    <Compile Include="DAL\SiteRepository.cs" />
+    <Compile Include="DAL\SubnetRepository.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\Contact.cs" />
-    <Compile Include="Models\IP.cs" />
-    <Compile Include="Models\IPComparer.cs" />
+    <Compile Include="Models\Ip.cs" />
+    <Compile Include="Models\IpComparer.cs" />
     <Compile Include="Models\NetVisEntities.cs" />
     <Compile Include="Models\SampleData.cs" />
     <Compile Include="Models\Site.cs" />
@@ -96,6 +104,10 @@
     <Content Include="App_Data\NetVis_log.ldf">
       <DependentUpon>NetVis.mdf</DependentUpon>
     </Content>
+    <Content Include="Content\bootstrap-responsive.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\themes\base\images\glyphicons-halflings-white.png" />
+    <Content Include="Content\themes\base\images\glyphicons-halflings.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -226,6 +238,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\IP\Delete.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Helpers\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
