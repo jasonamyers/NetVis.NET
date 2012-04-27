@@ -19,10 +19,23 @@ namespace NetVis.Net.Tests.Controllers
             HomeController controller = new HomeController();
 
             // Act
-            ViewResult result = controller.Index() as ViewResult;
+            var result = controller.Index() as ViewResult;
 
             // Assert
-            Assert.AreEqual("Welcome to ASP.NET MVC!", result.ViewBag.Message);
+            Assert.IsNotNull(result, "Should have returned a ViewResult");            
+        }
+
+        [TestMethod]
+        public void Index_View_Generates_ListSites()
+        {
+            // Arrange
+            HomeController controller = new HomeController();
+
+            // Act
+            var result = controller.Index() as ViewResult;
+
+            // Assert
+            Assert.IsNotNull(result.ViewBag.ListSites, "Should have returned a ListSites");
         }
 
         [TestMethod]
@@ -35,7 +48,7 @@ namespace NetVis.Net.Tests.Controllers
             ViewResult result = controller.About() as ViewResult;
 
             // Assert
-            Assert.IsNotNull(result);
+            Assert.IsNotNull(result, "Should have returned a ViewResult");
         }
     }
 }

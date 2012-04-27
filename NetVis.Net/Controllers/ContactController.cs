@@ -5,21 +5,32 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using NetVis.Net.DAL;
 using NetVis.Net.Models;
 
 namespace NetVis.Net.Controllers
 { 
     public class ContactController : Controller
     {
-        private NetVisEntities db = new NetVisEntities();
+        private IContactRepository contactRepository;
+        private ISiteRepository siteRepository = new SiteRepository(new NetVisEntities());
+
+        public ContactController()
+        {
+            this.contactRepository = new ContactRepository(new NetVisEntities());
+        }
+
+        public ContactController(IContactRepository contactRepository)
+        {
+            this.contactRepository = contactRepository;
+        }
 
         //
         // GET: /Contact/
 
         public ViewResult Index()
         {
-            var contacts = db.Contacts.Include(c => c.Site);
-            return View(contacts.ToList());
+            return View(contactRepository.GetContacts());
         }
 
         //
@@ -27,7 +38,7 @@ namespace NetVis.Net.Controllers
 
         public ViewResult Details(int id)
         {
-            Contact contact = db.Contacts.Find(id);
+            Contact contact = contactRepository.GetContactByID(id);
             return View(contact);
         }
 
@@ -36,7 +47,8 @@ namespace NetVis.Net.Controllers
 
         public ActionResult Create()
         {
-            ViewBag.SiteId = new SelectList(db.Sites, "SiteId", "Name");
+            ViewBag.SiteID = new SelectList(siteRepository.GetSites(), "SiteId", "Name");
+            
             return View();
         } 
 
@@ -48,12 +60,12 @@ namespace NetVis.Net.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Contacts.Add(contact);
-                db.SaveChanges();
+                contactRepository.InsertContact(contact);
+                contactRepository.Save();
                 return RedirectToAction("Index");  
             }
-
-            ViewBag.SiteId = new SelectList(db.Sites, "SiteId", "Name", contact.SiteId);
+            ViewBag.SiteID = new SelectList(siteRepository.GetSites(), "SiteId", "Name");
+            
             return View(contact);
         }
         
@@ -62,8 +74,9 @@ namespace NetVis.Net.Controllers
  
         public ActionResult Edit(int id)
         {
-            Contact contact = db.Contacts.Find(id);
-            ViewBag.SiteId = new SelectList(db.Sites, "SiteId", "Name", contact.SiteId);
+            Contact contact = contactRepository.GetContactByID(id);
+            ViewBag.SiteID = new SelectList(siteRepository.GetSites(), "SiteId", "Name");
+            
             return View(contact);
         }
 
@@ -75,11 +88,12 @@ namespace NetVis.Net.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Entry(contact).State = EntityState.Modified;
-                db.SaveChanges();
+                contactRepository.UpdateContact(contact);
+                contactRepository.Save();
                 return RedirectToAction("Index");
             }
-            ViewBag.SiteId = new SelectList(db.Sites, "SiteId", "Name", contact.SiteId);
+            ViewBag.SiteID = new SelectList(siteRepository.GetSites(), "SiteId", "Name");
+            
             return View(contact);
         }
 
@@ -88,7 +102,7 @@ namespace NetVis.Net.Controllers
  
         public ActionResult Delete(int id)
         {
-            Contact contact = db.Contacts.Find(id);
+            Contact contact = contactRepository.GetContactByID(id);
             return View(contact);
         }
 
@@ -98,15 +112,15 @@ namespace NetVis.Net.Controllers
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
         {            
-            Contact contact = db.Contacts.Find(id);
-            db.Contacts.Remove(contact);
-            db.SaveChanges();
+            Contact contact = contactRepository.GetContactByID(id);
+            contactRepository.DeleteContact(id);
+            contactRepository.Save();
             return RedirectToAction("Index");
         }
 
         protected override void Dispose(bool disposing)
         {
-            db.Dispose();
+            contactRepository.Dispose();
             base.Dispose(disposing);
         }
     }

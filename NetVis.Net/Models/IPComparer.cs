@@ -5,7 +5,7 @@ using System.Web;
 
 namespace NetVis.Net.Models
 {
-    public class IPComparer : IComparer<string>
+    public class IpComparer : IComparer<string>
     {
         public int Compare(String a, String b)
         {

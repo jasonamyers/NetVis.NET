@@ -15,6 +15,6 @@ namespace NetVis.Net.Models
         public string Gateway { get; set; }
         public int Preference { get; set; }
         public Site Site { get; set; }
-        public List<Ip> Ips { get; set; }
+        public ICollection<Ip> Ips { get; set; }
     }
 }
