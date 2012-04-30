@@ -1,66 +1,66 @@
 ﻿<RecentFiles>
   <RecentFiles>
-    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Contact/f:Create.cshtml" caret="0" fromTop="0" />
-    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Contact/f:Delete.cshtml" caret="0" fromTop="0" />
-    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Models/f:Contact.cs" caret="0" fromTop="0" />
-    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Controllers/f:AccountController.cs" caret="0" fromTop="0" />
-    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Content/d:themes/d:base/f:jquery.ui.theme.css" caret="0" fromTop="0" />
-    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Site/f:Details.cshtml" caret="371" fromTop="16" />
-    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Models/f:Ip.cs" caret="0" fromTop="0" />
-    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:DAL/f:IContactRepository.cs" caret="381" fromTop="13" />
-    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Models/f:IpComparer.cs" caret="0" fromTop="0" />
-    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:DAL/f:IIpRepository.cs" caret="201" fromTop="9" />
-    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:DAL/f:IpRepository.cs" caret="95" fromTop="3" />
-    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Controllers/f:SubnetController.cs" caret="2860" fromTop="14" />
-    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Controllers/f:IPController.cs" caret="297" fromTop="13" />
-    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/f:_ViewStart.cshtml" caret="52" fromTop="2" />
-    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:DAL/f:ISubnetRepository.cs" caret="258" fromTop="11" />
-    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:DAL/f:SiteRepository.cs" caret="596" fromTop="23" />
     <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:DAL/f:ISiteRepository.cs" caret="74" fromTop="2" />
     <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Controllers/f:SiteController.cs" caret="925" fromTop="27" />
     <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Controllers/f:HomeController.cs" caret="210" fromTop="8" />
     <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Content/f:bootstrap.min.css" caret="34629" fromTop="35" />
     <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Home/f:Index.cshtml" caret="625" fromTop="17" />
-    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Contact/f:Index.cshtml" caret="608" fromTop="13" />
-    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:DAL/f:SubnetRepository.cs" caret="743" fromTop="27" />
     <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Controllers/f:ContactController.cs" caret="2069" fromTop="23" />
-    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Subnet/f:Edit.cshtml" caret="808" fromTop="20" />
-    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:DAL/f:ContactRepository.cs" caret="734" fromTop="15" />
     <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Shared/f:_Layout.cshtml" caret="289" fromTop="6" />
     <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Content/f:Site.css" caret="278" fromTop="0" />
-    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Contact/f:Details.cshtml" caret="658" fromTop="10" />
-    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Contact/f:Edit.cshtml" caret="859" fromTop="17" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:DAL/f:ContactRepository.cs" caret="734" fromTop="15" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Subnet/f:Create.cshtml" caret="934" fromTop="25" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Subnet/f:Delete.cshtml" caret="71" fromTop="4" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Subnet/f:Details.cshtml" caret="2769" fromTop="30" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Subnet/f:Index.cshtml" caret="1156" fromTop="32" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:IP/f:Index.cshtml" caret="790" fromTop="23" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:DAL/f:IpRepository.cs" caret="551" fromTop="24" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:DAL/f:SubnetRepository.cs" caret="651" fromTop="21" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Subnet/f:Edit.cshtml" caret="885" fromTop="6" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:IP/f:Delete.cshtml" caret="2159" fromTop="26" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:IP/f:Edit.cshtml" caret="557" fromTop="16" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:IP/f:Details.cshtml" caret="68" fromTop="4" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Contact/f:Index.cshtml" caret="2617" fromTop="38" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Site/f:Index.cshtml" caret="427" fromTop="8" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Contact/f:Edit.cshtml" caret="2257" fromTop="12" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Site/f:Edit.cshtml" caret="1797" fromTop="19" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Site/f:Details.cshtml" caret="70" fromTop="4" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Site/f:Delete.cshtml" caret="1718" fromTop="47" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Site/f:Create.cshtml" caret="520" fromTop="15" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Contact/f:Delete.cshtml" caret="1791" fromTop="23" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Contact/f:Details.cshtml" caret="2041" fromTop="35" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Contact/f:Create.cshtml" caret="526" fromTop="13" />
   </RecentFiles>
   <RecentEdits>
-    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Contact/f:Index.cshtml" caret="541" fromTop="15" />
-    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Contact/f:Index.cshtml" caret="315" fromTop="9" />
-    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Contact/f:Edit.cshtml" caret="2857" fromTop="6" />
-    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Contact/f:Edit.cshtml" caret="2857" fromTop="14" />
-    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Contact/f:Edit.cshtml" caret="2857" fromTop="37" />
-    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Contact/f:Edit.cshtml" caret="2651" fromTop="27" />
-    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Contact/f:Edit.cshtml" caret="708" fromTop="20" />
-    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Contact/f:Edit.cshtml" caret="2593" fromTop="38" />
-    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Contact/f:Index.cshtml" caret="2619" fromTop="28" />
-    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Contact/f:Edit.cshtml" caret="2499" fromTop="34" />
-    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Contact/f:Details.cshtml" caret="2092" fromTop="5" />
-    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Contact/f:Details.cshtml" caret="2092" fromTop="27" />
-    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Contact/f:Details.cshtml" caret="2092" fromTop="31" />
-    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Content/f:Site.css" caret="5520" fromTop="0" />
-    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Shared/f:_Layout.cshtml" caret="447" fromTop="14" />
-    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Shared/f:_Layout.cshtml" caret="289" fromTop="6" />
-    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Content/f:Site.css" caret="6452" fromTop="42" />
-    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Content/f:Site.css" caret="3728" fromTop="0" />
-    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Content/f:Site.css" caret="4723" fromTop="42" />
-    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Content/f:Site.css" caret="3085" fromTop="42" />
-    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Content/f:Site.css" caret="278" fromTop="0" />
-    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Contact/f:Details.cshtml" caret="2092" fromTop="8" />
-    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Contact/f:Details.cshtml" caret="2092" fromTop="20" />
-    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Contact/f:Details.cshtml" caret="2092" fromTop="26" />
-    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Contact/f:Details.cshtml" caret="2092" fromTop="31" />
-    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Contact/f:Details.cshtml" caret="2092" fromTop="27" />
-    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Contact/f:Details.cshtml" caret="1551" fromTop="33" />
-    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Contact/f:Details.cshtml" caret="658" fromTop="10" />
-    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:DAL/f:ContactRepository.cs" caret="656" fromTop="26" />
-    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Contact/f:Edit.cshtml" caret="1073" fromTop="20" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Site/f:Index.cshtml" caret="304" fromTop="6" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Site/f:Edit.cshtml" caret="71" fromTop="6" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Site/f:Edit.cshtml" caret="525" fromTop="17" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Site/f:Edit.cshtml" caret="628" fromTop="21" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Site/f:Edit.cshtml" caret="2319" fromTop="13" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Site/f:Edit.cshtml" caret="1959" fromTop="23" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Site/f:Details.cshtml" caret="70" fromTop="4" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Site/f:Details.cshtml" caret="4049" fromTop="34" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Site/f:Details.cshtml" caret="4049" fromTop="31" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Site/f:Details.cshtml" caret="4049" fromTop="33" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Site/f:Details.cshtml" caret="4049" fromTop="34" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Site/f:Details.cshtml" caret="4049" fromTop="22" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Site/f:Details.cshtml" caret="4049" fromTop="16" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Site/f:Details.cshtml" caret="4049" fromTop="14" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Site/f:Details.cshtml" caret="4049" fromTop="25" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Site/f:Details.cshtml" caret="4049" fromTop="30" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Site/f:Details.cshtml" caret="562" fromTop="17" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Site/f:Details.cshtml" caret="293" fromTop="9" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Site/f:Delete.cshtml" caret="73" fromTop="6" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Site/f:Delete.cshtml" caret="2020" fromTop="42" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Site/f:Delete.cshtml" caret="665" fromTop="20" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Site/f:Delete.cshtml" caret="2440" fromTop="42" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Site/f:Delete.cshtml" caret="2295" fromTop="34" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Site/f:Create.cshtml" caret="2811" fromTop="5" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Site/f:Create.cshtml" caret="2811" fromTop="18" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Site/f:Create.cshtml" caret="2811" fromTop="10" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Site/f:Create.cshtml" caret="2811" fromTop="27" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Site/f:Create.cshtml" caret="2811" fromTop="29" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Site/f:Create.cshtml" caret="520" fromTop="15" />
+    <File id="B0CF6281-986B-46DD-AC88-35AA1A71C2B2/d:Views/d:Contact/f:Create.cshtml" caret="526" fromTop="13" />
   </RecentEdits>
 </RecentFiles>

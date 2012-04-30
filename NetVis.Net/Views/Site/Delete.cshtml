@@ -4,35 +4,65 @@
     ViewBag.Title = "Delete";
 }
 
-<h2>Delete</h2>
-
-<h3>Are you sure you want to delete this?</h3>
-<fieldset>
-    <legend>Site</legend>
-
-    <div class="display-label">Name</div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.Name)
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span2">
+            <div class="well sidebar-nav">
+                <ul class="nav nav-list">
+                    <li class="nav-header">Site Actions:</li>
+                    <li class="active">@Html.ActionLink("Create New", "Create")</li>
+                </ul>
+            </div>
+        </div>
+        <div class="span10">
+            <div class="leaderboard">
+                <h1>
+                    Delete</h1>
+                <h2>
+                    Are you sure you want to delete this?</h2>
+                <table class="table table-striped table-condensed">
+                    <tr>
+                        <th>
+                            Name
+                        </th>
+                        <td class="display-field">
+                            @Html.DisplayFor(model => model.Name)
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="display-label">
+                            Address
+                        </th>
+                        <td class="display-field">
+                            @Html.DisplayFor(model => model.Address)
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="display-label">
+                            Description
+                        </th>
+                        <td class="display-field">
+                            @Html.DisplayFor(model => model.Description)
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="display-label">
+                            Priority
+                        </th>
+                        <td class="display-field">
+                            @Html.DisplayFor(model => model.Priority)
+                        </td>
+                    </tr></table>
+                <p>
+                    @using (Html.BeginForm())
+                    {
+                        <p>
+                            <input class="btn btn-danger" type="submit" value="Delete" />
+                            <a class="btn" href="/Site">Cancel</a>
+                        </p>
+                    }
+                </p>
+            </div>
+        </div>
     </div>
-
-    <div class="display-label">Address</div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.Address)
-    </div>
-
-    <div class="display-label">Description</div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.Description)
-    </div>
-
-    <div class="display-label">Priority</div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.Priority)
-    </div>
-</fieldset>
-@using (Html.BeginForm()) {
-    <p>
-        <input type="submit" value="Delete" /> |
-        @Html.ActionLink("Back to List", "Index")
-    </p>
-}
+</div>
