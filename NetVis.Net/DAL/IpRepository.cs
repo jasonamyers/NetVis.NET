@@ -25,7 +25,7 @@ namespace NetVis.Net.DAL
 
         public Ip GetIpByID(int ID)
         {
-            return context.Ips.Find(ID);
+            return context.Ips.Include("Subnet").Single(i => i.IpId == ID);
         }
 
         public void InsertIp(Ip Ip)

@@ -1,57 +1,67 @@
 ﻿@model IEnumerable<NetVis.Net.Models.Ip>
-
 @{
     ViewBag.Title = "Index";
 }
-
-<h2>Index</h2>
-
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table>
-    <tr>
-        <th>
-            Subnet
-        </th>
-        <th>
-            Address
-        </th>
-        <th>
-            Name
-        </th>
-        <th>
-            Purpose
-        </th>
-        <th>
-            Url
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Subnet.Network)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Address)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Purpose)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Url)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.IpId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.IpId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.IpId })
-        </td>
-    </tr>
-}
-
-</table>
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span2">
+            <div class="well sidebar-nav">
+                <ul class="nav nav-list">
+                    <li class="nav-header">IP Actions:</li>
+                    <li class="active">@Html.ActionLink("Create New", "Create")</li>
+                </ul>
+            </div>
+        </div>
+        <div class="span10">
+            <div class="leaderboard">
+                <legend>IP Addresses</legend>
+                <table>
+                    <tr>
+                        <th>
+                            Subnet
+                        </th>
+                        <th>
+                            Address
+                        </th>
+                        <th>
+                            Name
+                        </th>
+                        <th>
+                            Purpose
+                        </th>
+                        <th>
+                            Url
+                        </th>
+                        <th>
+                        </th>
+                    </tr>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Subnet.Network)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Address)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Name)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Purpose)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Url)
+                            </td>
+                            <td>
+                                <a class="btn btn-primary" href="/Ip/Details/@item.IpId"><i class="icon-search icon-white"></i>Details</a>
+                                <a class="btn btn-warning" href="/Ip/Edit/@item.IpId"><i class="icon-pencil icon-white"></i>Edit</a>
+                                <a class="btn btn-danger" href="/Ip/Delete/@item.IpId"><i class="icon-trash icon-white"></i>Delete</a>
+                            </td>
+                        </tr>
+                    }
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

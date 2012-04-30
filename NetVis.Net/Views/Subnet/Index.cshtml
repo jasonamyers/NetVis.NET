@@ -2,51 +2,58 @@
 @{
     ViewBag.Title = "Subnets";
 }
-<div class="Outer">
-    <div class="Inner">
-        <div class="MainContent">
-            <table>
-                <tr>
-                    <th>
-                        Site
-                    </th>
-                    <th>
-                        Network
-                    </th>
-                    <th>
-                        Description
-                    </th>
-
-                    <th>
-                    </th>
-                </tr>
-                @foreach (var item in Model)
-                {
-                    <tr>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Site.Name)
-                        </td>
-                        <td>
-                            @Html.ActionLink(Html.DisplayFor(modelItem => item.Network).ToString(), "Details", new { id = item.SubnetId})
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Description)
-                        </td>
-
-                        <td>
-                            @Html.ActionLink("Edit", "Edit", new { id=item.SubnetId }) | @Html.ActionLink("Delete", "Delete", new { id = item.SubnetId })
-                        </td>
-                    </tr>
-                }
-            </table>
-        </div>
-        <div class="RightColumn">
-            <b>Create New:</b>
-            <div class="indent">
-                @Html.ActionLink("Subnet", "Create", "Subnet")<br />
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span2">
+            <div class="well sidebar-nav">
+                <ul class="nav nav-list">
+                    <li class="nav-header">Subnet Actions:</li>
+                    <li class="active">@Html.ActionLink("Create New", "Create")</li>
+                </ul>
             </div>
         </div>
-        <div class="clear">
+        <div class="span10">
+            <div class="leaderboard">
+                <table class="table table-striped table-condensed">
+                    <thead>
+                        <tr>
+                            <th>
+                                Site
+                            </th>
+                            <th>
+                                Network
+                            </th>
+                            <th>
+                                Description
+                            </th>
+                            <th>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Site.Name)
+                                </td>
+                                <td>
+                                    @Html.ActionLink(Html.DisplayFor(modelItem => item.Network).ToString(), "Details", new { id = item.SubnetId })
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Description)
+                                </td>
+                                <td>
+                                    <a class="btn btn-primary" href="/Subnet/Details/@item.SubnetId"><i class="icon-search icon-white">
+                                    </i>Details</a> <a class="btn btn-warning" href="/Subnet/Edit/@item.SubnetId"><i
+                                        class="icon-pencil icon-white"></i>Edit</a> <a class="btn btn-danger" href="/Subnet/Delete/@item.SubnetId">
+                                            <i class="icon-trash icon-white"></i>Delete</a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 </div>
