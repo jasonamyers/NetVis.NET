@@ -63,7 +63,7 @@ namespace NetVis.Net.Controllers
 
         //
         // GET: /Account/Register
-
+        [Authorize(Roles = "Administrator")]
         public ActionResult Register()
         {
             return View();
@@ -71,7 +71,7 @@ namespace NetVis.Net.Controllers
 
         //
         // POST: /Account/Register
-
+        [Authorize(Roles = "Administrator")]
         [HttpPost]
         public ActionResult Register(RegisterModel model)
         {
@@ -98,7 +98,7 @@ namespace NetVis.Net.Controllers
 
         //
         // GET: /Account/ChangePassword
-
+        
         [Authorize]
         public ActionResult ChangePassword()
         {

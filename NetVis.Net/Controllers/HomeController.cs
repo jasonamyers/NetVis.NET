@@ -6,6 +6,7 @@ using NetVis.Net.Models;
 
 namespace NetVis.Net.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     {
         private ISiteRepository siteRepository;

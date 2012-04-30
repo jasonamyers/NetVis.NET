@@ -9,7 +9,8 @@ using NetVis.Net.DAL;
 using NetVis.Net.Models;
 
 namespace NetVis.Net.Controllers
-{ 
+{
+    [Authorize]
     public class SiteController : Controller
     {
         private ISiteRepository siteRepository;
@@ -43,7 +44,7 @@ namespace NetVis.Net.Controllers
         //
         // GET: /Site/Create
 
-        
+        [Authorize(Roles = "Administrator")]
         public ActionResult Create()
         {
             return View();
@@ -52,7 +53,7 @@ namespace NetVis.Net.Controllers
         //
         // POST: /Site/Create
 
-        
+        [Authorize(Roles = "Administrator")]
         [HttpPost]
         public ActionResult Create(Site site)
         {
@@ -69,7 +70,7 @@ namespace NetVis.Net.Controllers
         //
         // GET: /Site/Edit/5
 
-        
+        [Authorize(Roles = "Administrator")]
         public ActionResult Edit(int id)
         {
             Site site = siteRepository.GetSiteByID(id);
@@ -78,8 +79,8 @@ namespace NetVis.Net.Controllers
 
         //
         // POST: /Site/Edit/5
-        
-        
+
+        [Authorize(Roles = "Administrator")]
         [HttpPost]
         public ActionResult Edit(Site site)
         {
@@ -95,7 +96,7 @@ namespace NetVis.Net.Controllers
         //
         // GET: /Site/Delete/5
 
-        
+        [Authorize(Roles = "Administrator")]
         public ActionResult Delete(int id)
         {
             Site site = siteRepository.GetSiteByID(id);
@@ -105,7 +106,7 @@ namespace NetVis.Net.Controllers
         //
         // POST: /Site/Delete/5
 
-        
+        [Authorize(Roles = "Administrator")]
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
         {            
