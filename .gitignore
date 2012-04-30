@@ -51,8 +51,11 @@ TestResults/
 ###################### 
 *.log 
 *.sqlite 
+<<<<<<< HEAD
 *.ldf
 *.mdf
+=======
+>>>>>>> 7a9f303d6dc2b0b12cc0e636b5eebea030dcc1da
 # OS generated files # 
 ###################### 
 .DS_Store? 
