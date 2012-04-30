@@ -9,7 +9,8 @@ using NetVis.Net.DAL;
 using NetVis.Net.Models;
 
 namespace NetVis.Net.Controllers
-{ 
+{
+    [Authorize]
     public class IpController : Controller
     {
         private IIpRepository ipRepository;
@@ -43,16 +44,16 @@ namespace NetVis.Net.Controllers
 
         //
         // GET: /IP/Create
-
+        [Authorize(Roles = "Administrator")]
         public ActionResult Create()
         {
             ViewBag.SubnetId = new SelectList(subnetRepository.GetSubnets(), "SubnetId", "Network");
             return View();
-        } 
+        }
 
         //
         // POST: /IP/Create
-
+        [Authorize(Roles = "Administrator")]
         [HttpPost]
         public ActionResult Create(Ip ip)
         {
@@ -60,16 +61,16 @@ namespace NetVis.Net.Controllers
             {
                 ipRepository.InsertIp(ip);
                 ipRepository.Save();
-                return RedirectToAction("Index");  
+                return RedirectToAction("Index");
             }
 
             ViewBag.SubnetId = new SelectList(subnetRepository.GetSubnets(), "SubnetId", "Network", ip.SubnetId);
             return View(ip);
         }
-        
+
         //
         // GET: /IP/Edit/5
- 
+        [Authorize(Roles = "Administrator")]
         public ActionResult Edit(int id)
         {
             Ip ip = ipRepository.GetIpByID(id);
@@ -79,13 +80,13 @@ namespace NetVis.Net.Controllers
 
         //
         // POST: /IP/Edit/5
-
+        [Authorize(Roles = "Administrator")]
         [HttpPost]
         public ActionResult Edit(Ip ip)
         {
             if (ModelState.IsValid)
             {
-               ipRepository.UpdateIp(ip);
+                ipRepository.UpdateIp(ip);
                 ipRepository.Save();
                 return RedirectToAction("Index");
             }
@@ -95,7 +96,7 @@ namespace NetVis.Net.Controllers
 
         //
         // GET: /IP/Delete/5
- 
+        [Authorize(Roles = "Administrator")]
         public ActionResult Delete(int id)
         {
             Ip ip = ipRepository.GetIpByID(id);
@@ -104,10 +105,10 @@ namespace NetVis.Net.Controllers
 
         //
         // POST: /IP/Delete/5
-
+        [Authorize(Roles = "Administrator")]
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
-        {            
+        {
             Ip ip = ipRepository.GetIpByID(id);
             ipRepository.DeleteIp(id);
             ipRepository.Save();

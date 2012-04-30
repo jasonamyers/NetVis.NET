@@ -9,7 +9,8 @@ using NetVis.Net.DAL;
 using NetVis.Net.Models;
 
 namespace NetVis.Net.Controllers
-{ 
+{
+    [Authorize]
     public class ContactController : Controller
     {
         private IContactRepository contactRepository;
@@ -44,17 +45,17 @@ namespace NetVis.Net.Controllers
 
         //
         // GET: /Contact/Create
-
+        [Authorize(Roles = "Administrator")]
         public ActionResult Create()
         {
             ViewBag.SiteID = new SelectList(siteRepository.GetSites(), "SiteId", "Name");
-            
+
             return View();
-        } 
+        }
 
         //
         // POST: /Contact/Create
-
+        [Authorize(Roles = "Administrator")]
         [HttpPost]
         public ActionResult Create(Contact contact)
         {
@@ -62,27 +63,27 @@ namespace NetVis.Net.Controllers
             {
                 contactRepository.InsertContact(contact);
                 contactRepository.Save();
-                return RedirectToAction("Index");  
+                return RedirectToAction("Index");
             }
             ViewBag.SiteID = new SelectList(siteRepository.GetSites(), "SiteId", "Name");
-            
+
             return View(contact);
         }
-        
+
         //
         // GET: /Contact/Edit/5
- 
+        [Authorize(Roles = "Administrator")]
         public ActionResult Edit(int id)
         {
             Contact contact = contactRepository.GetContactByID(id);
             ViewBag.SiteID = new SelectList(siteRepository.GetSites(), "SiteId", "Name");
-            
+
             return View(contact);
         }
 
         //
         // POST: /Contact/Edit/5
-
+        [Authorize(Roles = "Administrator")]
         [HttpPost]
         public ActionResult Edit(Contact contact)
         {
@@ -93,13 +94,13 @@ namespace NetVis.Net.Controllers
                 return RedirectToAction("Index");
             }
             ViewBag.SiteID = new SelectList(siteRepository.GetSites(), "SiteId", "Name");
-            
+
             return View(contact);
         }
 
         //
         // GET: /Contact/Delete/5
- 
+        [Authorize(Roles = "Administrator")]
         public ActionResult Delete(int id)
         {
             Contact contact = contactRepository.GetContactByID(id);
@@ -108,10 +109,10 @@ namespace NetVis.Net.Controllers
 
         //
         // POST: /Contact/Delete/5
-
+        [Authorize(Roles = "Administrator")]
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
-        {            
+        {
             Contact contact = contactRepository.GetContactByID(id);
             contactRepository.DeleteContact(id);
             contactRepository.Save();
