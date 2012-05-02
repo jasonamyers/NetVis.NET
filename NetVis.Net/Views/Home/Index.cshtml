@@ -1,4 +1,5 @@
-﻿@model NetVis.Net.Models.Site
+﻿@using NetVis.Net.Models
+@model NetVis.Net.Models.Site
 @{
     ViewBag.Title = "Sites and Subnets";
 }
@@ -21,6 +22,8 @@
                     <tr>
                         @foreach (var sites in ViewBag.ListSites)
                         {
+                            HashSet<Subnet> sitesubnets = sites.Subnets;
+                            List<Subnet> subnets = sitesubnets.ToList();
                             if (sites.Priority == 1)
                             {
                             <td style="vertical-align: top">
@@ -32,7 +35,7 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach (NetVis.Net.Models.Subnet mainsubnet in sites.Subnets)
+                                        @foreach (NetVis.Net.Models.Subnet mainsubnet in subnets.OrderBy(i => i.Network, new NetVis.Net.Models.IpComparer()))
                                         {
                                             <tr>
                                                 <td>@Html.ActionLink(mainsubnet.Network, "Details", "Subnet", new { id = mainsubnet.SubnetId }, null)
@@ -53,13 +56,11 @@
                         if (remotes.Priority != 1)
                         {
                         <tr>
-                            <td>@remotes.Name
-                            </td>
+                            <td>@remotes.Name</td>
                             @foreach (NetVis.Net.Models.Subnet remotesubnets in remotes.Subnets)
                             {
     
-                                <td>@Html.ActionLink(remotesubnets.Network, "Details", "Subnet", new { id = remotesubnets.SubnetId }, null)
-                                </td>
+                                <td>@Html.ActionLink(remotesubnets.Network, "Details", "Subnet", new { id = remotesubnets.SubnetId }, null)</td>
                             }
                         </tr>
                         }

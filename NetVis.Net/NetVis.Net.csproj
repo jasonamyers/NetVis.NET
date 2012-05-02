@@ -101,9 +101,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\NetVis.mdf" />
-    <Content Include="App_Data\NetVis_log.ldf">
-      <DependentUpon>NetVis.mdf</DependentUpon>
-    </Content>
     <Content Include="Content\bootstrap-responsive.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\themes\base\images\glyphicons-halflings-white.png" />
